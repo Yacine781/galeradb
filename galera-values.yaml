@@ -17,14 +17,14 @@ galera:
 
 resources:
   requests:
-    memory: 256Mi
-    cpu: 250m
-  limits:
-    memory: 512Mi
+    memory: 1Gi
     cpu: 500m
+  limits:
+    memory: 2Gi
+    cpu: 1000m
 
 service:
   type: ClusterIP
-  name: my-galera-mariadb-galera  # Nom personnalisé du service
+  name: my-galera-mariadb-galera
   ports:
     mysql: 3306
